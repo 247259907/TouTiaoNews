@@ -1,11 +1,13 @@
 package com.jinhua.toutiaonews.ui.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.jinhua.toutiaonews.R;
+import com.jinhua.toutiaonews.mvp.base.BasePresenterActivity;
+import com.jinhua.toutiaonews.mvp.contract.MainContract;
+import com.jinhua.toutiaonews.mvp.presenter.MainPresenter;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BasePresenterActivity<MainContract.MainView,MainPresenter> implements MainContract.MainView{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
