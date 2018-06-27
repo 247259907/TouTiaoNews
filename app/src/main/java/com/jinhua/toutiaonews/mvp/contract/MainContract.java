@@ -6,7 +6,7 @@ import com.jinhua.toutiaonews.mvp.model.bean.MainTestBean;
 
 public interface MainContract {
     interface View extends BaseContract.BaseView{
-        void getMainNetData(String mainTestBean);
+        void getMainNetData(MainTestBean mainTestBean);
     }
 
     interface Presenter {

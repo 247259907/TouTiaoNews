@@ -16,8 +16,7 @@ public class MainModel implements MainContract.Model {
     public void getMainNetData(final NetRequestCallBack callBack) {
         NetHelper.getNetData(new NetHelper.MainDataCallBack() {
             @Override
-            public void mainData(String mainTestBean) {
-                Log.e("main--->model",mainTestBean.toString());
+            public void mainData(MainTestBean mainTestBean) {
                 callBack.getNetData(mainTestBean);
             }
         });
@@ -26,6 +25,6 @@ public class MainModel implements MainContract.Model {
 
 
     public interface  NetRequestCallBack{
-        void getNetData(String mainTestBean);
+        void getNetData(MainTestBean mainTestBean);
     }
 }

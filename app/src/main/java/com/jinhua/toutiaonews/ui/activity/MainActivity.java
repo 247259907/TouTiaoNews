@@ -18,8 +18,6 @@ public class MainActivity extends BasePresenterActivity<MainContract.View,MainPr
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.e("main--->view","12345");
-
         getData();
         initView();
     }
@@ -40,8 +38,8 @@ public class MainActivity extends BasePresenterActivity<MainContract.View,MainPr
     }
 
     @Override
-    public void getMainNetData(String mainTestBean) {
-        mMainTv.setText(mainTestBean);
+    public void getMainNetData(MainTestBean mainTestBean) {
+        mMainTv.setText(mainTestBean.getContent().getFrom());
     }
 }
 

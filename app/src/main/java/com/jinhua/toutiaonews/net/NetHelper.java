@@ -1,6 +1,7 @@
 package com.jinhua.toutiaonews.net;
 
 
+import android.util.Log;
 
 import com.jinhua.toutiaonews.mvp.model.bean.MainTestBean;
 
@@ -15,11 +16,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NetHelper {
 
-    public static MainTestBean mainTestBean1;
 
-    public static void getNetData(final MainDataCallBack callBack) {
-
-        makeFakeData();
+    public static void getNetData(final MainDataCallBack callBack){
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://fy.iciba.com/")
@@ -39,8 +37,7 @@ public class NetHelper {
 
             @Override
             public void onNext(MainTestBean mainTestBean) {
-                //TODO 有错误，出不来结果
-                callBack.mainData("hahahahahhha");
+                callBack.mainData(mainTestBean);
             }
 
             @Override
@@ -53,19 +50,12 @@ public class NetHelper {
 
             }
         });
-    }
+     }
 
 
-    public static void makeFakeData(){
-        mainTestBean1 = new MainTestBean();
-        mainTestBean1.setStatus(1);
-        MainTestBean.ContentBean contentBean = new MainTestBean.ContentBean();
-        contentBean.setFrom("hahahhahahah");
-        contentBean.setOut("lalalallalala");
-        mainTestBean1.setContent(contentBean);
-    }
+
 
      public interface MainDataCallBack{
-        void mainData(String mainTestBean);
+        void mainData(MainTestBean mainTestBean);
      }
 }

@@ -1,7 +1,5 @@
 package com.jinhua.toutiaonews.mvp.presenter;
 
-import android.util.Log;
-
 import com.jinhua.toutiaonews.mvp.base.BasePresenter;
 import com.jinhua.toutiaonews.mvp.contract.MainContract;
 import com.jinhua.toutiaonews.mvp.model.MainModel;
@@ -19,10 +17,8 @@ public class MainPresenter extends BasePresenter<MainContract.View> implements M
     public void getMainNetData() {
         model.getMainNetData(new MainModel.NetRequestCallBack() {
             @Override
-            public void getNetData(String mainTestBean) {
+            public void getNetData(MainTestBean mainTestBean) {
                 if(getView() != null){
-                    Log.e("main--->presenter",mainTestBean.toString());
-
                     getView().getMainNetData(mainTestBean);
                 }
             }
