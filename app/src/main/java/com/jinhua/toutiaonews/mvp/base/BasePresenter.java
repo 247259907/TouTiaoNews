@@ -4,7 +4,7 @@ public  abstract class BasePresenter<V extends BaseContract.BaseView> implements
 
     private V view;
 
-    private V getView(){
+    public V getView(){
         return view;
     }
 
