@@ -7,7 +7,8 @@ import com.jinhua.toutiaonews.mvp.base.BasePresenterActivity;
 import com.jinhua.toutiaonews.mvp.contract.MainContract;
 import com.jinhua.toutiaonews.mvp.presenter.MainPresenter;
 
-public class MainActivity extends BasePresenterActivity<MainContract.MainView,MainPresenter> implements MainContract.MainView{
+public class MainActivity extends BasePresenterActivity<MainContract.View,MainPresenter> implements MainContract.View {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,4 +16,8 @@ public class MainActivity extends BasePresenterActivity<MainContract.MainView,Ma
         setContentView(R.layout.activity_main);
     }
 
+    @Override
+    public MainPresenter createPresenter() {
+        return new MainPresenter();
+    }
 }

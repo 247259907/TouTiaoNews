@@ -6,8 +6,9 @@ public interface BaseContract {
 
     }
 
-    interface BasePresenter{
-
+    interface BasePresenter<V extends BaseView>{
+        void attachView(V view);
+        void detachView();
     }
 
     interface BaseModel{
