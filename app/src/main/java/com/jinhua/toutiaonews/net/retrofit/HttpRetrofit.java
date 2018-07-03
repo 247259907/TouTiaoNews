@@ -92,6 +92,7 @@ public class HttpRetrofit {
             //创建一个Retrofit对象，并且指定api的域名：
         mOkHttpClient = getDefaultHttpClient();
             retrofit = new Retrofit.Builder()
+                    .client(mOkHttpClient)
                     .baseUrl(mBaseUrl)
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .addConverterFactory(GsonConverterFactory.create())

@@ -7,8 +7,6 @@ import com.jinhua.toutiaonews.net.retrofit.Constants;
 
 import java.io.EOFException;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.StringWriter;
 import java.net.ConnectException;
 import java.net.SocketTimeoutException;
 

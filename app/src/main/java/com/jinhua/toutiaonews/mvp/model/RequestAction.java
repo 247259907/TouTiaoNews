@@ -1,4 +1,4 @@
-package com.jinhua.toutiaonews.net.net;
+package com.jinhua.toutiaonews.mvp.model;
 
 public enum RequestAction {
     RXJAVA_TEST

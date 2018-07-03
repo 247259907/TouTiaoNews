@@ -1,4 +1,4 @@
-package com.jinhua.toutiaonews.net.net;
+package com.jinhua.toutiaonews.mvp.model;
 
 import com.jinhua.toutiaonews.mvp.model.bean.TestBean;
 

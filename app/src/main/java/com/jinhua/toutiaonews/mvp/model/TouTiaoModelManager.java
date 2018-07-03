@@ -1,6 +1,7 @@
-package com.jinhua.toutiaonews.net.net;
+package com.jinhua.toutiaonews.mvp.model;
 
 import com.jinhua.toutiaonews.mvp.base.BaseModel;
+import com.jinhua.toutiaonews.net.net.ProgressSubscriber;
 
 import io.reactivex.Observable;
 

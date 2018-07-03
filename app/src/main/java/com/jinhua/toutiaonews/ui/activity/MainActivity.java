@@ -9,7 +9,7 @@ import com.jinhua.toutiaonews.mvp.base.BasePresenterActivity;
 import com.jinhua.toutiaonews.mvp.contract.MainContract;
 import com.jinhua.toutiaonews.mvp.model.bean.TestBean;
 import com.jinhua.toutiaonews.mvp.presenter.MainPresenter;
-import com.jinhua.toutiaonews.net.net.RequestAction;
+import com.jinhua.toutiaonews.mvp.model.RequestAction;
 
 public class MainActivity extends BasePresenterActivity<MainContract.View,MainPresenter> implements MainContract.View {
 

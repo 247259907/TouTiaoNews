@@ -2,11 +2,8 @@ package com.jinhua.toutiaonews.mvp.presenter;
 
 import com.jinhua.toutiaonews.mvp.base.BasePresenter;
 import com.jinhua.toutiaonews.mvp.contract.MainContract;
-import com.jinhua.toutiaonews.mvp.model.MainModel;
-import com.jinhua.toutiaonews.mvp.model.bean.TestBean;
-import com.jinhua.toutiaonews.net.net.RequestAction;
-import com.jinhua.toutiaonews.net.net.TouTiaoModelManager;
-import com.jinhua.toutiaonews.net.retrofit.RetrofitManager;
+import com.jinhua.toutiaonews.mvp.model.RequestAction;
+import com.jinhua.toutiaonews.mvp.model.TouTiaoModelManager;
 
 public class MainPresenter extends BasePresenter<MainContract.View> implements MainContract.Presenter{
 
