@@ -1,9 +1,7 @@
 package com.jinhua.toutiaonews.mvp.model;
 
-import android.util.Log;
-
 import com.jinhua.toutiaonews.mvp.contract.MainContract;
-import com.jinhua.toutiaonews.mvp.model.bean.MainTestBean;
+import com.jinhua.toutiaonews.mvp.model.bean.TestBean;
 import com.jinhua.toutiaonews.net.NetHelper;
 
 public class MainModel implements MainContract.Model {
@@ -16,7 +14,7 @@ public class MainModel implements MainContract.Model {
     public void getMainNetData(final NetRequestCallBack callBack) {
         NetHelper.getNetData(new NetHelper.MainDataCallBack() {
             @Override
-            public void mainData(MainTestBean mainTestBean) {
+            public void mainData(TestBean mainTestBean) {
                 callBack.getNetData(mainTestBean);
             }
         });
@@ -25,6 +23,6 @@ public class MainModel implements MainContract.Model {
 
 
     public interface  NetRequestCallBack{
-        void getNetData(MainTestBean mainTestBean);
+        void getNetData(TestBean mainTestBean);
     }
 }

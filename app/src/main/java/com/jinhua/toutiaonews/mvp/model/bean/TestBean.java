@@ -1,6 +1,6 @@
 package com.jinhua.toutiaonews.mvp.model.bean;
 
-public class MainTestBean {
+public class TestBean {
 
     /**
      * status : 1

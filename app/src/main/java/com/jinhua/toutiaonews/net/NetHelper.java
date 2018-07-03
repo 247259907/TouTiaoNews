@@ -1,9 +1,7 @@
 package com.jinhua.toutiaonews.net;
 
 
-import android.util.Log;
-
-import com.jinhua.toutiaonews.mvp.model.bean.MainTestBean;
+import com.jinhua.toutiaonews.mvp.model.bean.TestBean;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
@@ -27,16 +25,16 @@ public class NetHelper {
 
         ApiHelper apiHelper = retrofit.create(ApiHelper.class);
 
-        Observable<MainTestBean> observable = apiHelper.onResult();
+        Observable<TestBean> observable = apiHelper.onResult();
 
-        observable.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(new Observer<MainTestBean>() {
+        observable.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(new Observer<TestBean>() {
             @Override
             public void onSubscribe(Disposable d) {
 
             }
 
             @Override
-            public void onNext(MainTestBean mainTestBean) {
+            public void onNext(TestBean mainTestBean) {
                 callBack.mainData(mainTestBean);
             }
 
@@ -56,6 +54,6 @@ public class NetHelper {
 
 
      public interface MainDataCallBack{
-        void mainData(MainTestBean mainTestBean);
+        void mainData(TestBean mainTestBean);
      }
 }

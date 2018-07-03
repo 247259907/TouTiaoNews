@@ -4,12 +4,12 @@ package com.jinhua.toutiaonews.mvp.base;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-public abstract class BasePresenterFragment<V extends BaseContract.BaseView,T extends BasePresenter<V>> extends BaseFragment{
+public abstract class BasePresenterFragment<V extends BaseContract.BaseView, P extends BasePresenter<V>> extends BaseFragment{
 
-    private T mPresenter;
-    public abstract T createPresenter();
+    private P mPresenter;
+    public abstract P createPresenter();
 
-    public T getPresenter(){
+    public P getPresenter(){
         return mPresenter;
     }
 

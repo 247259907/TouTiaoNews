@@ -5,16 +5,16 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 
 
-public abstract class BasePresenterActivity<V extends BaseContract.BaseView,T extends BasePresenter<V>> extends FragmentActivity implements BaseContract.BaseView {
+public abstract class BasePresenterActivity<V extends BaseContract.BaseView, P extends BasePresenter<V>> extends FragmentActivity implements BaseContract.BaseView {
 
     private V view;
-    private T presenter;
+    private P presenter;
 
-    public T getPresenter(){
+    public P getPresenter(){
         return presenter;
     }
 
-    public abstract T createPresenter();
+    public abstract P createPresenter();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
